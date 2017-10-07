@@ -8,7 +8,12 @@ import org.springframework.stereotype.Component;
 public class ResourceEntityMapper {
 
     public TaxEntity resourceToEntity(V1TaxEntity resource) {
-        return new TaxEntity(resource.getPan(), resource.getEmail(), resource.getCellPhone());
+        return new TaxEntity(
+                resource.getPan(),
+                resource.getEmail(),
+                resource.getCellPhone(),
+                resource.getStateOrUnionTerritory().name()
+        );
     }
 
 }

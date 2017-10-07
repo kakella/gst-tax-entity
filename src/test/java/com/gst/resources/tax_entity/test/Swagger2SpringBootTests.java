@@ -39,6 +39,7 @@ public class Swagger2SpringBootTests {
         resource.setPan("DUMMY_PAN");
         resource.setEmail("a@b.com");
         resource.setCellPhone("99999-99999");
+        resource.setStateOrUnionTerritory(V1TaxEntity.StateOrUnionTerritoryEnum.AD);
 
         taxEntity = mapper.resourceToEntity(resource);
     }

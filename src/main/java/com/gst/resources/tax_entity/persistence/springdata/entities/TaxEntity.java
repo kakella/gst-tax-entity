@@ -27,13 +27,20 @@ public class TaxEntity {
     private String email;
 
     @Field
+    @NotNull
     private String cellPhone;
 
-    public TaxEntity(String pan, String email, String cellPhone) {
+    @Field
+    @NotNull
+    private String stateOrUnionTerritory;
+
+
+    public TaxEntity(String pan, String email, String cellPhone, String stateOrUnionTerritory) {
         this.id = TaxEntity.getIdFromPAN(pan);
         this.pan = pan;
         this.email = email;
         this.cellPhone = cellPhone;
+        this.stateOrUnionTerritory = stateOrUnionTerritory;
     }
 
     public static String getIdFromPAN(String pan) {
@@ -70,5 +77,13 @@ public class TaxEntity {
 
     public void setCellPhone(String cellPhone) {
         this.cellPhone = cellPhone;
+    }
+
+    public String getStateOrUnionTerritory() {
+        return stateOrUnionTerritory;
+    }
+
+    public void setStateOrUnionTerritory(String stateOrUnionTerritory) {
+        this.stateOrUnionTerritory = stateOrUnionTerritory;
     }
 }

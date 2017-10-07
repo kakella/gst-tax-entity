@@ -87,6 +87,7 @@ definitions:
     - pan
     - email
     - cellPhone
+    - stateOrUnionTerritory
     properties:
       pan:
         description: |
@@ -100,6 +101,48 @@ definitions:
         description: |
           The cell phone number of the tax-entity
         type: string
+      stateOrUnionTerritory:
+        description: |
+          The state or union territory that the entity is taxable under
+        type: string
+        enum: #https://www.zoho.com/in/books/kb/gst/valid-state-codes-list.html
+        - AN
+        - AD
+        - AR
+        - AS
+        - BR
+        - CH
+        - CG
+        - DN
+        - DD
+        - DL
+        - GA
+        - GJ
+        - HR
+        - HP
+        - JK
+        - JH
+        - KA
+        - KL
+        - LD
+        - MP
+        - MH
+        - MN
+        - ML
+        - MZ
+        - NL
+        - OD
+        - PY
+        - PB
+        - RJ
+        - SK
+        - TN
+        - TS
+        - TR
+        - UP
+        - UK
+        - WB
+
 
 #
 # Common models
